@@ -5,7 +5,7 @@
         <title>ToDo Items</title>
         <link rel="stylesheet" href="css/app.css">
     </head>
-    <body>
+    <body onLoad="removeButton()">
         <div class="container">
             <section class="todo">
                 <h1>Still todo</h1>
@@ -35,10 +35,17 @@
         </div>
         <script>
             var toggler = true;
+            function removeButton(){
+                var text = document.getElementsByClassName('text').clientHeight;
+                var button = document.getElementsByClassName(text.id)[0];
+                console.log(text.id);
+                if(text <= 200){
+                    button.style.display = 'none'
+                }
+            }
             function readMore(id){
-                var text = document.getElementById(id);
-                var button = document.getElementsByClassName(id);
-                console.log(id);
+                var text = document.getElementById(id);     
+                var button = document.getElementsByClassName(id)[0];
                 if(toggler){
                     text.style.maxHeight = 'none';
                     button.innerHTML = '^';
@@ -47,6 +54,9 @@
                     text.style.maxHeight = '200px';
                     button.innerHTML = '˅';
                     toggler = true;
+                }
+                if(text.clientHeight < 190){
+                    button.style.display = 'none'
                 }
             }
         </script>

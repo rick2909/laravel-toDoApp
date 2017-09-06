@@ -1,6 +1,6 @@
-<article class="task">
+<article class="task" onLoad="removeButton({{ $task['id'] }})">
     <h2> {{ $task['title'] }} </h2>
-    <p id="{{ $task['id'] }}"> {!! nl2br(e($task['description'])) !!} </p>
+    <p id="{{ $task['id'] }}" class="text"> {!! nl2br(e($task['description'])) !!} </p>
     <div class="buttons">
         <form action="{{ $task['id'] }}" method="post">
             {{ csrf_field() }}
