@@ -36,11 +36,12 @@
         <script>
             var toggler = true;
             function removeButton(){
-                var text = document.getElementsByClassName('text').clientHeight;
-                var button = document.getElementsByClassName(text.id)[0];
-                console.log(text.id);
-                if(text <= 200){
-                    button.style.display = 'none'
+                var text = document.getElementsByClassName('text');
+                for (var i = 0; i < text.length; i++) {
+                    if(text[i].clientHeight < 198){
+                        var button = document.getElementsByClassName(text[i].id)[0];
+                        button.style.display = 'none';
+                    }
                 }
             }
             function readMore(id){
@@ -54,9 +55,6 @@
                     text.style.maxHeight = '200px';
                     button.innerHTML = '˅';
                     toggler = true;
-                }
-                if(text.clientHeight < 190){
-                    button.style.display = 'none'
                 }
             }
         </script>

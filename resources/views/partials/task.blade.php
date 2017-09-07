@@ -1,4 +1,4 @@
-<article class="task" onLoad="removeButton({{ $task['id'] }})">
+<article class="task">
     <h2> {{ $task['title'] }} </h2>
     <p id="{{ $task['id'] }}" class="text"> {!! nl2br(e($task['description'])) !!} </p>
     <div class="buttons">
