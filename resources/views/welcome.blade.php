@@ -6,10 +6,6 @@
         <link rel="stylesheet" href="css/app.css">
     </head>
     <body onLoad="removeButton()">
-    <select name="language" id="language">
-        <option value="english">english</option>
-        <option value="dutch">dutch</option>
-    </select>
         <div class="container">
             <section class="todo">
                 <h1>Still todo</h1>

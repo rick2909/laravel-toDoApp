@@ -18,13 +18,3 @@ Route::post('/', 'Todocontroller@create');
 Route::post('/{id}', 'Todocontroller@updaten');
 
 Route::delete('/{id}', 'Todocontroller@delete');
-
-//use Language route
-
-Route::post('/language-chooser', 'LanguageController@changeLanguage');
-
-Route::post('/language/' , array(
-    'before' => 'csrf',
-    'as' => 'language-chooser',
-    'uses' => 'LanguageController@changeLanguage',
-));
