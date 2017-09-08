@@ -8396,6 +8396,7 @@ button.close {
   padding-top: 10px;
   width: 90%;
   margin: 5px auto 5px auto;
+  max-height: 2000px;
   border: 3px solid #d3e0e9;
 }
 
@@ -8409,7 +8410,7 @@ button.close {
   overflow: hidden;
 }
 
-.buttons {
+.btn {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8418,8 +8419,8 @@ button.close {
           justify-content: space-between;
 }
 
-.buttons .change,
-.buttons .delete {
+.btn .btn__change,
+.btn .btn__delete {
   color: #ffffff;
   background: #239D49;
   border: 1px solid #239D49;
@@ -8427,8 +8428,15 @@ button.close {
   padding: 5px 20px 5px 20px;
 }
 
-.buttons .delete {
+.btn .btn__delete {
   background: #BF2828;
   border-color: #BF2828;
+}
+
+.btn .btn__more {
+  background: #f5f8fa;
+  border: 1px solid #f5f8fa;
+  margin: 5px;
+  padding: 5px 10px 5px 10px;
 }
 
