@@ -9,7 +9,7 @@ function removeButton(){
     }
 }
 function readMore(id){
-    var text = document.getElementById(id);     
+    var text = document.getElementById(id);
     var button = document.getElementsByClassName(id)[0];
     if(toggler){
         text.style.maxHeight = 'none';
