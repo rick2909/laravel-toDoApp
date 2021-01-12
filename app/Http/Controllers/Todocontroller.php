@@ -19,7 +19,7 @@ class Todocontroller extends Controller
             'description' => 'required|max:1000'
         ]);
         if ($validator->fails()) {
-            return redirect('post/create')
+            return redirect('')
                         ->withErrors($validator)
                         ->withInput();
         }
